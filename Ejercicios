@@ -1,0 +1,84 @@
+#include <iostream>
+using namespace std;
+//Suma de los elementos del arreglo
+int suma(int arr, int largo)
+{
+    int cont=0;
+    for(int i=0 ; i<largo ; i++)
+    {
+        cont=cont+arr[i];
+    }
+    return cont;
+}
+int main()
+{
+    int m[] ={3,8,5,4};
+    cout<<suma(m , 4)<<endl;
+}
+//Menor del arreglo
+int menor(int lista[],int tamanio){
+    int chiquito=lista[0];
+    for(int i=0;i<tamanio;i++){
+        if (lista[i]<chiquito){
+            chiquito=lista[i];
+        }
+    return chiquito;
+    }
+
+
+}
+int main()
+{
+    int lista[]={1,2,3,4,5},tam=5;
+    cout<<menor(lista,5);
+    return 0;
+}
+//numeros perfectos del arreglo
+bool perfecto(int z){
+    int sum=0;
+    for (int i=1;i<z;i++){
+        if ((z%i)==0){
+                sum +=i;
+            }
+    }
+    if (sum == z)
+        return true;
+    else
+        return false;
+
+}
+int arregloperfecto(int lista[],int t){
+    int cantidad=0;
+    for (int i=0;i<t;i++){
+        if(perfecto(lista[i])==true){
+            cantidad+=1;
+        }
+    }
+    return cantidad;
+}
+int main()
+{
+    int lista[]={1,2,3,6,5};
+    int tamanio=6;
+    cout<<arregloperfecto(lista,6);
+    return 0;
+}
+//ordenar el arreglo
+//invertir el arreglo
+void invertir(int lista[],int tamanio){
+ int x=tamanio-1,ue;
+ for(int i=0;i<(tamanio/2);i++){
+  ue=lista[i];
+  lista[i]=lista[x];
+  lista[x]=ue;
+        x-=1;
+ }
+}
+int main()
+{
+int arreglo[]={1,2,3,4,5},tamanio=5;
+invertir(arreglo,5);
+for (int i=0;i<tamanio;i++)
+    cout<<arreglo[i];
+return 0;
+}
