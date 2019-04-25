@@ -22,6 +22,9 @@
                 representar valores numéricos; en otros casos, representan caracteres de un
                 alfabeto y signos de puntuación, a veces representan imágenes y otras sonidos.
         </p2></FONT>
+
+        <div align="center"><img src="imagen1.jpg" width="300" height="300"></div>
+
     <h3 align = "left"> Operaciones Booleanas </h3>
     <FONT SIZE = 4><p3 align = "left">Para entender cómo se almacenan y manipulan los bits individuales dentro de
                 una computadora, es conveniente imaginar que el bit 0 representa el valor
@@ -39,7 +42,9 @@
                 lugar de valores numéricos.
             </p3></FONT>
 
-        <img src="booleanos.jpg">
+            <div align="center"><img src="imagen2.jpg" width="300" height="300"></div>
+   
+
 
         <H2>1.2 Memoria principal</H2>
         <FONT SIZE = 4> <p4>Con el objetivo de almacenar datos, una computadora contiene un enorme conjunto
@@ -47,6 +52,9 @@
                     almacenar un único bit. Este conjunto de bits se conoce como memoria principal
                     de la máquina.
             </p4></FONT>
+            
+            <div align="center"><img src="imagen3.jpg" width="300" height="300"></div>
+
         <h3>Organización de la memoria</h3>
         <FONT SIZE = 4><p5>La memoria principal de una computadora está organizada en una serie de unidades
                     accesibles denominadas celdas, siendo el tamaño típico de celda igual a
@@ -107,6 +115,10 @@
                     por lo que hace falta un tiempo considerablemente mayor para almacenar y
                     extraer los datos del que se necesita en la memoria principal de la computadora,
                     en la que todas las actividades se llevan a cabo de forma electrónica.</p7></FONT>
+
+                    
+            <div align="center"><img src="imagen4.jpg" width="300" height="300"></div>
+
             <h3>Sistemas magnéticos</h3>
             <FONT SIZE = 4><p8>Durante años, la tecnología magnética ha sido la dominante dentro del sector
                     del almacenamiento masivo. El ejemplo más común y que todavía se utiliza es
@@ -157,12 +169,124 @@
             lógicas está compuesto por instrucciones que codifican operaciones aritméticas,
             lógicas y de desplazamiento. En esta sección, vamos a examinar estas operaciones
             con más detalle.</p></FONT>
+            
+            <div align="center"><img src="imagen5.jpg" width="300" height="300"></div>
+
         <h3>Operaciones lógicas</h3>
             <p>En el Capítulo 1 hemos presentado las operaciones lógicas AND, OR y XOR
                 (OR exclusiva) como operaciones que combinan dos bits de entrada para generar
                 un único bit de salida. Estas operaciones pueden ampliarse a otras operaciones
                 que combinen dos cadenas de bits para generar una única cadena de
                 salida, aplicando la operación básica a todas las columnas individuales.</p>
+        <h2>1.5 El sistema binario</h2>
+
+        <FONT SIZE = 4><p>Recuerde que en el sistema en base diez, cada posición de una representación
+            numérica está asociada con un determinado peso. En la representación 375, el
+            5 se encuentra en la posición asociada con el peso uno, el 7 está en la posición
+            asociada con el peso diez y el 3 está en la posición asociada con el peso cien
+            (Figura 1.15a). Cada uno de esos pesos es diez veces el peso de la posición
+            situada a su derecha. El valor representado por la expresión completa se
+            obtiene multiplicando el valor de cada dígito por el peso asociado con la posición
+            de este dígito y luego sumando esos productos. Para ilustrar el proceso, el
+            patrón 375 representa (3  cien)  (7  diez)  (5  uno), lo que en notación
+            más técnica sería (3  102)  (7  101)  (5  100).</p></FONT>
+
+            
+            <div align="center"><img src="imagen6.jpg" width="300" height="300"></div>
+
+        <h2>1.6 Almacenamiento de enteros</h2>
+        <FONT SIZE = 4><p>Los matemáticos han estado interesados desde hace mucho tiempo en los sistemas
+            de notación numérica y muchas de sus ideas han resultado ser bastante
+            compatibles con el diseño de circuitos digitales. En esta sección vamos a considerar
+            dos de estos sistemas de notación, la notación en complemento a dos y la
+            notación en exceso, que se emplean para representar valores enteros en los
+            equipos de computación. Estos sistemas están basados en el sistema binario,
+            pero tienen propiedades adicionales que los hacen más compatibles con el
+            diseño de computadoras. Sin embargo, estas ventajas también tienen asociadas
+            ciertas desventajas. Nuestro objetivo es comprender estas propiedades y ver
+            cómo afectan a la utilización de las computadoras.</p></FONT>
+            
+            <div align="center"><img src="imagen7.jpg" width="300" height="300"></div>
+
+        <h2>1.7 Almacenamiento de números fraccionarios</h2>
+        <FONT SIZE = 4><p>Expliquemos la notación en punto flotante utilizando solo un byte de almacenamiento.
+            Aunque normalmente las máquinas utilizan patrones mucho más
+            largos, este formato de 8 bits es representativo de los sistemas reales y sirve
+            para demostrar los conceptos importantes sin el engorro de emplear largos
+            patrones de bits.
+            En primer lugar, designamos el bit de mayor peso de ese byte como bit de
+            signo. De nuevo, un 0 en el bit de signo indicará que el valor almacenado es no
+            negativo, mientras que un 1 indicará que el valor es negativo. A continuación,
+            dividimos los restantes 7 bits del byte en dos grupos o campos: el campo de
+            exponente y el campo de mantisa. Designaremos los 3 bits situados a continuación
+            del bit de signo como el campo de exponente y los restantes 4 bits
+            como el campo de mantisa. La Figura 1.26 ilustra cómo está dividido el byte.
+            Podemos explicar el significado de los campos considerando el siguiente
+            ejemplo. Suponga un byte compuesto por el patrón de bits 01101011.
+            Analizando este patrón con el formato precedente, vemos que el bit de signo es
+            0, el exponente es 110 y la mantisa es 1011. Para decodificar el byte, primero
+            extraemos la mantisa y colocamos un punto raíz a su izquierda, obteniendo
+            .1011
+            A continuación, extraemos el contenido del campo de exponente (110) y lo
+            interpretamos como un entero almacenado utilizando el método de notación
+            en exceso de 3 bits (consulte de nuevo la Figura 1.25). De ese modo, el patrón
+            en el campo de exponente de nuestro ejemplo representa un valor 2 positivo.
+            Esto nos indica que debemos mover el punto raíz de nuestra solución hacia la
+            derecha un total de 2 posiciones. (Un exponente negativo indicaría que hay que
+            mover el punto raíz hacia la izquierda.) En consecuencia, obtenemos
+            10.11
+            que es la representación binaria de 23⁄4. A continuación, observamos que el bit
+            de signo de nuestro ejemplo es 0; el valor representado es por tanto negativo.</p></FONT>
+            
+            <div align="center"><img src="imagen8.jpg" width="300" height="300"></div>
+        
+        <h2>1.8 Compresión de datos</h2>
+        <FONT SIZE = 4><p>Los esquemas de compresión de datos pueden clasificarse en dos categorías.
+            Algunos de ellos son sin pérdidas, mientras que otros son con pérdidas. Los
+            esquemas sin pérdidas son aquellos en los que no se pierde información
+            durante el proceso de compresión. Los esquemas con pérdidas son esos otros
+            que pueden llevar a la pérdida de una parte de la información. Las técnicas con
+            pérdidas proporcionan a menudo un mayor grado de compresión que los que
+            no tienen pérdidas y son, por tanto, bastante populares en aquellos entornos en
+            los que pueden tolerarse los errores poco significativos, como es el caso de las
+            imágenes y del audio.
+            En aquellos casos en los que los datos que se están comprimiendo están formados
+            por largas secuencias del mismo valor, una técnica de compresión muy
+            popular es la denominada codificación por longitud de secuencia, que es un
+            método de compresión sin pérdidas. Dicha técnica es el proceso de sustituir las
+            secuencias de elementos de datos con un código que indica el elemento repetido
+            y el número de veces que ese elemento aparece dentro de la secuencia. Por
+            ejemplo, esto permite reducir el espacio requerido para indicar que un patrón
+            de bits está compuesto por 253 unos, seguidos de 118 ceros y seguidos de 87
+            unos. El número de bits almacenados con esta técnica de compresión será
+            mucho menor que si enumeráramos los 458 bits que componen el patrón.</p></FONT>
+
+            
+            <div align="center"><img src="imagen9.jpg" width="300" height="300"></div>
+        
+            <h2>1.9 Errores de comunicación</h2>
+            <FONT SIZE = 4><p>Cuando se intercambia información entre distintas partes de una computadora,
+                o se transmite información desde la Tierra a la Luna, y viceversa, o también
+                cuando se almacena simplemente la información, siempre existe la posibilidad
+                de que el patrón de bits extraído al final no sea idéntico al patrón original. Las
+                partículas de polvo o de grasa en la superficie magnética de grabación o los problemas
+                de funcionamiento de un circuito pueden hacer que los datos se graben
+                o se lean de manera incorrecta. El ruido estático en una ruta de transmisión
+                puede corromper determinadas partes de los datos y, en el caso de algunas tecnologías,
+                la radiación de fondo normal puede alterar los patrones almacenados
+                en la memoria principal de la máquina.</p></FONT>
+
+                
+            <div align="center"><img src="imagen10.jpg" width="300" height="300"></div>
+            
+
+        
+            
+
+        
+
+
+        
 
 
 
